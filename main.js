@@ -16,12 +16,12 @@ function dayTime() {
   let day = today.getDay();
 
   const currentDay = days[day];
-  myDay.innerHTML = currentDay;
+  myDay.innerHTML = "Day:" + " " + currentDay;
 
   let hour = today.getUTCHours();
   let minute = today.getUTCMinutes();
   let seconds = today.getUTCSeconds();
-  myTime.innerHTML = ` ${hour}:${minute}:${seconds}`;
+  myTime.innerHTML = `Time: ${hour}:${minute}:${seconds}`;
 }
 
 setInterval(dayTime, 100);
