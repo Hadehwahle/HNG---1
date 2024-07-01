@@ -20,15 +20,16 @@ body {
   color: #faf5e9;
 }
 a {
-  text-decoration: none;
   padding-inline: 1rem;
+  text-decoration: underline;
+  text-decoration-color: yellow;
   color: #faf5e9;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.2s ease-in-out;
   font-family: "Space Mono", monospace;
 }
 a:hover {
   color: green;
-  border-bottom: 3px solid yellow;
+  text-decoration-color: #faf5e9;
 }
 p {
   font-family: "Forum", serif;
