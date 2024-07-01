@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Forum&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  background: linear-gradient(
+    45deg,
+    #05052d,
+    #4a0404,
+    #009b4d,
+    #23d5ab,
+    #454b1b
+  );
+  background-size: 300% 300%;
+  animation: color 12s ease-in-out infinite;
+  color: #faf5e9;
+}
+a {
+  text-decoration: none;
+  padding-inline: 1rem;
+  color: #faf5e9;
+  transition: all 0.3s ease-in-out;
+  font-family: "Space Mono", monospace;
+}
+a:hover {
+  color: green;
+  border-bottom: 3px solid yellow;
+}
+p {
+  font-family: "Forum", serif;
+  width: 80%;
+  margin: 0 auto;
+  padding-bottom: 0.5rem;
+}
+
+h1 {
+  font-size: 1.5rem;
+  padding-top: 1rem;
+  font-family: "Space Mono", monospace;
+  text-align: center;
+}
+h2 {
+  font-size: 1.5rem;
+  font-family: "Space Mono", monospace;
+  text-align: center;
+  padding-bottom: 1rem;
+}
+h3 {
+  line-height: 30px;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+.profile {
+  padding-block: 2rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-family: "Forum", serif;
+}
+.profile-pic {
+  width: 20%;
+  height: 20%;
+}
+
+.profile-pic img {
+  max-width: 100%;
+}
+.links {
+  padding-block: 2rem;
+  text-align: center;
+}
+span {
+  font-family: "Space Mono", monospace;
+}
+@keyframes color {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+@media (max-width: 900px) {
+  .profile {
+    flex-direction: column;
+  }
+  h3 {
+    text-align: center;
+    font-size: 1rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+  .profile-pic {
+    width: 30%;
+  }
+  h2,
+  h1 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .profile-pic {
+    width: 40%;
+  }
+  p {
+    text-align: center;
+  }
+  h1,
+  h2 {
+    font-size: 1rem;
+  }
+  a {
+    font-size: 0.7rem;
+  }
+}
