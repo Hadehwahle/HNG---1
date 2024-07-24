@@ -11,6 +11,10 @@ const days = [
   "Saturday",
 ];
 
+function padZero(number) {
+  return (number < 10 ? "0" : "") + number;
+}
+
 function dayTime() {
   let today = new Date();
   let day = today.getDay();
@@ -19,9 +23,13 @@ function dayTime() {
   myDay.innerHTML = "Day:" + " " + currentDay;
 
   let hour = today.getUTCHours();
-  let minute = today.getUTCMinutes();
-  let seconds = today.getUTCSeconds();
-  myTime.innerHTML = `Time: ${hour}:${minute}:${seconds}`;
+  const minute = today.getUTCMinutes();
+  const seconds = today.getUTCSeconds();
+  const meridien = hour >= 12 ? "PM" : "AM";
+  hour = hour % 12 || 12;
+  myTime.innerHTML = `Time: ${padZero(hour)}:${padZero(minute)}:${padZero(
+    seconds
+  )} ${meridien}`;
 }
 
-setInterval(dayTime, 100);
+setInterval(dayTime, 1000);
